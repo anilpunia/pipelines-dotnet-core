@@ -19,4 +19,4 @@ steps:
   inputs:
     containerRegistry: 'HL-Docker'
     command: 'run'
-    arguments: '-v $(Build.SourcesDirectory):/here -v $(Agent.TempDirectory):/there casthighlight/hl-agent-cli:latest --sourceDir here --workingDir there --skipUpload'
+    arguments: '-v $(Build.SourcesDirectory):/here -v $(Agent.TempDirectory):/there casthighlight/hl-agent-cli:latest --sourceDir here --workingDir there --companyId 9566 --applicationId 40996 --login a.kumar+Sandbox@castsoftware.com --password CastHL@2020 --serverUrl https://rpa.casthighlight.com/'
