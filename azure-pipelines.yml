@@ -19,4 +19,4 @@ steps:
   inputs:
     containerRegistry: 'HL-Docker'
     command: 'run'
-    arguments: '-v $(Build.SourcesDirectory):/here -v $(Agent.TempDirectory):/there casthighlight/hl-agent-cli:latest –sourceDir here –workingDir there –skipUpload'
+    arguments: '-v $(Build.SourcesDirectory):/here -v $(Agent.TempDirectory):/there casthighlight/hl-agent-cli:latest --sourceDir here --workingDir there --skipUpload'
