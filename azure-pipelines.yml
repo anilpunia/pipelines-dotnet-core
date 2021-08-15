@@ -15,3 +15,8 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'HL-Docker'
+    command: 'run'
+    arguments: '-v $(Build.SourcesDirectory):/here -v $(Agent.TempDirectory):/there casthighlight/hl-agent-cli:5.1.9 –sourceDir here –workingDir there –skipUpload'
